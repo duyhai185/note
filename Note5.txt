@@ -1,0 +1,30 @@
+1.Simple Custom Post Order -> kéo thả order chính xác
+
+kéo thả -> parent -> không chính xác
+parent -> kéo thả -> chỉnh xác 
+
+sắp xếp chính xác thứ tự order back-end sau mỗi lần kéo thả, dù reload lại page thứ tự có thể không như thế
+
+2.Post Types Order -> kéo thả order chính xác
+
+kéo thả -> parent -> không chính xác
+parent -> kéo thả -> chỉnh xác 
+
+order theo thứ tự menu không phân  biệt cha con
+
+sắp xếp chính xác thứ tự order back-end sau mỗi lần kéo thả, dù reload lại page thứ tự có thể không như thế
+
+
+3.CPT - > nếu không có cha con thì vẫn đúng;
+nhưng nếu có cha con thì sẽ ưu tiên sắp xếp theo cấp cha hoặc con chứ không theo order kéo thả
+
+-> 2 plugin kia không thể kéo thả thay đổi cha con, còn cái của mình thì có
+
+
+
+Test 2 plugin Simple Custom Post Order và Post Types Order thì thấy họ không có chức năng kéo thả phân cấp cha con, 
+chỉ có kéo thả 1 cấp là chính xác còn nếu nhiều cấp thì không kéo thả chính xác
+nhưng sắp xếp ngoài front-end sẽ lúc nào cũng theo sắp xếp trong back-end dù trong back-end dù trong backend có sắp xếp cha con không chính xác khi kéo thả
+
+Plugin của mình thì có kéo thả thay đổi phân cấp cha con chính xác do có 1 tab riêng tên là Re-Order nhưng sắp xếp ở frontend thì lại theo 1 cách khác
+với 2 plugin kia, plugin của mình sẽ sắp xếp theo từng cấp,nghĩa là cấp cha xong mới đến con hoặc ngược lại, không theo thứ tự sắp xếp trong back-end

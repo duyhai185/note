@@ -1,0 +1,82 @@
+git config --global user.name "Tên của bạn"
+git config --global user.email "Email của bạn"
+
+git config --global user.name "elumarketing"
+git config --global user.email "marketing@elightup.com"
+
+- Cập nhật nhánh tutorial theo nhánh master:
+	Cách 1
+		1.git checkout master (Chuyển sang nhánh master )
+		2.git pull origin master (Pull commits mới từ GitHub về máy)
+		3.git pull origin tutorial  (Cập nhật nhánh tutorial từ remote)
+		4.git checkout tutorial (Chuyển sang nhánh tutorial)
+		5.git merge master (dùng để hợp nhất (merge) nhánh master vào nhánh hiện tại, tức là lấy tất cả các thay đổi mới nhất từ master và gộp vào nhánh đang làm việc)
+	Cách 2:
+		git checkout tutorial (Chuyển sang nhánh tutorial)		
+		git rebase master (Cập nhật nhánh tutorial theo nhánh master:)
+
+
+
+
+- Merga nhánh tutorial và nhánh master
+	1.git checkout tutorial    (Chuyển sang nhánh tutorial)
+	2.git status 									(Kiểm tra trạng thái thay đổi)
+	3.git add .  									(Thêm all file vào Git)
+	4.git commit -m "Cập nhật nội dung file XYZ" 	(tạo một commit mới)
+	5.git push origin tutorial ((dùng để đẩy (push) toàn bộ thay đổi từ nhánh tutorial trên máy tính của bạn lên remote repository (GitHub/GitLab)))
+
+	6.git checkout master 							(Chuyển sang nhánh master)
+	7.git pull origin master 						(lấy các thay đổi mới nhất từ nhánh master trên remote repository (GitHub/GitLab) về máy của bạn và hợp nhất (merge) nó với nhánh hiện tại)
+
+	8.git merge tutorial 							(Merge nhánh tutorial vào nhánh hiện tại, hiện tại đang ở nhánh master)
+	9.git push origin master 						(Đẩy master lên GitHub)
+
+	10.git branch -d tutorial   					(Xóa nhánh tutorial trên máy)
+	11.git push origin --delete tutorial 			(Xóa nhánh tutorial trên GitHub)
+
+
+
+
+
+-  Nếu bạn đang làm việc trên master và muốn cập nhật từ master remove về master local:
+	git checkout master
+	git pull origin master
+-  Nếu bạn đang làm việc trên nhánh khác (tutorial) và muốn cập nhật từ tutorial remove về tutorial local:
+	git checkout tutorial
+	git pull origin tutorial
+
+- Xóa nhánh tutorial bằng Terminal
+	Trước khi xóa, đảm bảo bạn không đứng trên nhánh tutorial, vì Git không cho phép xóa nhánh hiện tại.
+	git checkout master  				   Chuyển sang nhánh khác (nếu đang ở tutorial)	
+	1.git branch -d tutorial               (Xóa nhánh tutorial trên máy)
+	2.git push origin --delete tutorial    (Xóa nhánh tutorial trên GitHub)
+
+
+- nếu không ở đúng thư mục, gõ :
+lệnh cd để kiểm tra xem đang ở đâu và 
+lệnh cd C:\laragon\www\wpmetabox\docsv2\ để trỏ đúng thư mục git đã clone repo Git
+lệnh cd C:\laragon\www\wpmetabox\tutorials\ để trỏ đúng thư mục git đã clone repo Git
+
+
+
+- nếu trên web đang sửa nhánh tutorial(remove) rồi, giờ Cập nhật nhánh tutorial ở local với những thay đổi mới nhất từ remote, 
+Chuyển sang nhánh master ở local và merge nhánh tutorial vào master và Đẩy (push) nhánh master ở local lên remote (origin/master).
+
+1.git checkout tutorial      # Chuyển sang nhánh tutorial
+2.git pull origin tutorial   # Cập nhật tutorial từ remote
+
+3.git checkout master        # Chuyển sang nhánh master
+4.git pull origin master     # Cập nhật master từ remote
+
+có thể thêm 2 lệnh sau, nhưng xem có cần thiết hay không
+5.git merge tutorial         # Hợp nhất tutorial vào nhánh hiện tại(thường thì là đang đứng ở master)
+
+6.git push origin master      # Đẩy master lên remote
+
+
+- nếu chưa clone về local, muốn clone code của riêng 1 nhánh trên remove về local để test 1 chức năng nào đó
+
+	1.git clone -b feat-reorder-hierarchical https://github.com/ten-ban/repo.git
+	feat-reorder-hierarchical là tên nhánh
+	https://github.com/ten-ban/repo.git là url của repo
+	2.composer install hoặc composer update (vào bên trong folder plugin đó)

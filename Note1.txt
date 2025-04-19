@@ -1,0 +1,67 @@
+Khi được chốt hoặc quay xong thì check lại bài đó 1 lượt như :
+file word, code, tên ticket, đánh số topic đó, video render, file export backup ....
+
+#tắt và ẩn thông báo update có thể cài 2 plugin này
+Disable WordPress Update Notifications
+Hide admin menu
+Link truy cập plugin in back-end khi đã ẩn:https://metabox12.wpengine.com/wp-admin/admin.php?page=hide-admin-menu
+
+
+check lại onedriver, và các file và folder ở máy đã cho len onedrive chưa
+448 - 404 not found
+459 - Comming Soon
+456 - Searching posts by taxonomy on archive page
+Các video đc chốt xem up lên chưa
+
+
+TWIG
+- Nhanh: TWIG bắt nguồn từ php, nhưng hãy nhìn cú pháp của nó: ngắn gọn, không cần quá nhiều ký tự đặc biệt như PHP và nó khá trực quan. Thực sự đơn gian hơn PHP gấp nhiều lần và chỉ cần để ý một tí thì chắc chắn các bạn sẽ nắm rõ nó.
+- An toàn: TWIG có chế độ kiểm thử để đánh giá các mẫu. Điều này cho phép TWIG được sử dụng như một mẫu ngôn ngữ cho các ứng dụng mà người dùng có thể thay đổi thiết kế mẫu.
+- Linh hoạt: TWIG trang bị khả năng phân tích cú pháp linh hoạt, Cho phép các nhà phát triển có thể tự tạo các cú pháp riêng.
+
+
+Sự khác biệt giữa add_action và add_filter
+
+-  một chức năng tại một điểm cụ thể (add_action).
+  Sửa đổi dữ liệu trước khi sử dụng (add_filter).
+
+- add_action cho phép chúng ta liên kết một hàm với một hoặc nhiều sự kiện WordPress. Trong khi add_filter cho phép chúng ta sửa đổi dữ liệu truyền đến bất kỳ hàm WP nào trong quá trình kích hoạt sự kiện.
+
+- add_action được sử dụng để thực hiện một hành động cụ thể khi một số sự kiện xảy ra.
+
+Ví dụ: khi người dùng thêm bài viết, tôi muốn kiểm tra xem bài viết tương tự đã tồn tại hay chưa, để làm được điều này, tôi sẽ thêm một hành động vào sự kiện gửi bài viết.
+
+add_filter được sử dụng khi chúng ta muốn thay thế/lọc thứ gì đó khi một số sự kiện xảy ra.
+
+Ví dụ: khi người dùng gửi bài viết, tôi muốn lọc các thuật ngữ cụ thể, tôi có thể thực hiện bằng cách thêm bộ lọc vào sự kiện gửi bài viết.
+Sự khác biệt chính:
+add_action(): Được sử dụng để thực hiện một hành động cụ thể tại một thời điểm trong quy trình thực thi của WordPress (ví dụ: thêm mã vào chân trang, thực hiện tác vụ khi lưu bài viết).
+add_filter(): Được sử dụng để sửa đổi hoặc lọc một dữ liệu trước khi nó được hiển thị hoặc lưu trữ (ví dụ: thay đổi nội dung bài viết, sửa đổi tiêu đề trang).
+Tóm lại:
+
+add_action(): Dành cho các hành động hoặc quy trình.
+add_filter(): Dành cho việc sửa đổi dữ liệu.
+
+
+
+check domain đã trỏ về hosting chưa
+chạy cmd run -> ping -t xiengretreat.com(ten doamin) -> nếu nó ra IP của hosting thì đã là trỏ thành công
+
+
+Topic:
+Core: Tối ưu hóa SEO cho trang Landing Page
+Core: Các lỗ hổng bảo mật phổ biến mà Website thường gặp phải.
+Core + Video: Horizontal Posts Accordion - Using MB Views
+Core + Video: MB462P2: Show Events Related - Using MB View
+Core + Video: Create Job Manager Page - Using MB View
+Core: Add alt image
+
+
+
+Chốt:
+Core + Video: Create Job Manager Page - MB Views
+Core + Video: MB462P2: Show Events Related - Using MB View
+Core + Video: Create Horizontal Post Accordion - Using MB Views
+Core: Add alt image khi submit field
+
+

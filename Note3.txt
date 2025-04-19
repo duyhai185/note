@@ -1,0 +1,307 @@
+https://docs.metabox.io/tutorials/display-latest-products-mb-views/
+https://docs.metabox.io/tutorials/display-product-variations-mb-views/
+2 bài này có video trên youtube rồi nhưng chưa chèn vào bài viết 
+ 
+khi quay deactive tất cả trước đi, sau đó quay thì bắt đầu checkbox vào cái nào cần dùng
+
+Topic :
+1. pricing table
+https://elementor.com/academy/how-to-make-price-tables-in-wordpress-with-elementor/
+làm với mb view, oxygen
+2. Before after image -> metabox03
+3. News Ticker
+4. Timeline Pro
+5. Background Video
+6. Social Tab
+https://extensions.joomla.org/extension/social-web/social-display/jux-social-tabs/
+7. Weather Forecast
+8. Real Estate
+9. Timetable
+Elementor 3.21 ra mắt với tính năng mới: Taxonomy Query in Loop Grids & Loop Carousels
+Background Video with Bricks
+
+
+Menu Resraurant with Breakdance chưa làm được vì có thể không lấy được image từ group field
+
+404 not found with oxygen lỗi k gọi repeater group được trong setting page, k gọi dc image trong setting page
+Display Author Bio check k làm với oxygen, vì có thể k query user relationship, k gọi đc cả user relationship
+Display Author Bio check k làm với breakdance vì có thể k gọi dc field từ user
+Timeline k làm đc với breakdance, vì có thể k lấy dc post_content ở field post, chỉ lấy dc title
+Random Hero Image k làm dc với bricks, elementor vì k gọi đc order theo kiểu random
+Random Hero Image k làm dc với breakdance vì k breakdance gọi đc data trong setting page
+Video playlist with Elementor, không gọi được dynamic data
+
+
+429 Opening hours -> check với elementor ...
+436 menu restaurant -> check với kadence, breakdance
+445 random image
+446 Autho bio -> check với elementor
+448 404 page -> check với kadence, breakdance, oxygen (làm giống breakdance)
+452 timeline -> check với kadence, breakdance
+455 video playlits -> check với elementor ...
+456 Searching posts by taxonomy -> check các page builder
+457 before after image -> check các page builder
+
+#menu restaurant - kadence
+#nghiên cứu làm 440 phần 7 8
+#nghiên cứu làm với các page builder và mb view bài : Searching posts by taxonomy on archive page - MB456
+Phần 456 chưa có folder trên onedrive, check và update lại
+Check với bricks thì chỉ filter theo taxonomy, k search theo taxonomy được
+
+#price table có thể k làm được với oxygen, vì k lấy được dữ liệu từ group clone trong group clone
+
+#Oygen có lấy đc field group in setting page, nếu là image thì có thể dùng text gọi field image đó sẽ hiện, 
+không lấy đc field group in group in setting page
+
+#làm tutorial hướng dẫn user lấy dữ liệu trong setting page  với oxygen: có thể làm 2 cách
+1 là dùng mb views
+2 là dùng code block của oxygen và dùng hàm PHP
+
+*****Oxygen k lấy được dữ liệu từ group clone trong group clone*****
+oxygen lỗi k gọi repeater group được trong setting page
+oxygen có gọi được repeater group clone field trong post hoặc page ( với field text trong group, field image check thấy hình như k đc)
+
+#có 1 bài dùng mb view để gọi field clone group trong setting page
+https://docs.metabox.io/tutorials/display-images-cloneable-fields-mb-views/
+
+#Nghiên cứu làm MB429 với các page builder khác 
+check bài 429 xem làm với Breakdance , conditional thì ok nhưng có thể k làm dc vì k gọi dc field group in group , hoặc field trong group cũng k dc, 
+check bài 429 xem làm với Elementor, gọi được field nhưng không conditional ẩn hiện được
+
+#Hiển thị danh sách sản phẩm từ MB Favorite Post dạng grid
+https://prnt.sc/xVBG66V4BAsR
+Cách hiện favorite: https://www.youtube.com/watch?v=fSFmNp-Ayew
+
+#Nghiên cứu làm MB-438: Display Most Viewed Restaurants với các page builder khác 
+
+#Nghiên cứu làm MB-402 với các page builder khác 
+- Elementor(làm giống Zion, dùng field type là file_input, add atribiute "download" cho button: https://elementor.com/help/custom-link-attributes/)
+- Beakdance(làm giống Zion, dùng field type là file_input, add atribiute "download" cho button)
+- Beaver Builder
+
+#Bricks filter search không search dc trong item trong relationship
+
+#Posts/CPT Items Related by Taxonomy in Oxygen
+https://wpdevdesign.com/posts-cpt-items-related-by-taxonomy-in-oxygen/
+Khác với bài thumbnails & featured Images là click vào page archive taxonomy và ở dưới hiện các post type liên quan đến taxonomy đó , còn đây bài này là single posttype và dưới hiện các post type liên quan theo taxonomy
+https://prnt.sc/UN5k22HoBQ2W
+https://oxygenbuilder.com/documentation/other/advanced-query-builder/
+https://goldpenguin.org/blog/how-to-create-a-related-posts-section-in-oxygen-builder-using-easyposts-query/
+
+#Upcoming Events Grouped by ‘Month Year’ in Bricks
+https://brickslabs.com/upcoming-events-grouped-by-month-year-in-bricks/
+https://wordpress.stackexchange.com/questions/316814/list-events-by-month
+https://forum.bricksbuilder.io/t/loop-of-years-for-events/18334
+có 2 kiểu, nhóm theo năm và nhóm theo tháng
+
+https://gochocit.com/lap-trinh-web/mang-2-chieu-2-dimensional-array-trong-php
+https://twig.symfony.com/doc/3.x/
+https://ourcodeworld.com/articles/read/622/how-to-push-an-item-to-an-array-in-twig-easily
+
+#hiện thị các bài post có 1 custom field nào đó không trống
+https://wpdevdesign.com/filtering-query-loop-posts-by-a-non-empty-custom-field-in-oxygen/
+làm điều kiện gần giống bài feature image
+
+https://www.facebook.com/groups/dynamicwordpress/posts/1571022000519945/
+https://www.facebook.com/groups/dynamicwordpress/posts/1570660117222800/
+
+#video này về Nested Loop (vòng lặp lồng nhau - nhiều cấp)
+https://www.youtube.com/watch?v=oQZCBTmZlEA
+https://stackoverflow.com/questions/69094498/wordpress-how-to-perform-nested-multilevel-querys-for-custom-post-types
+
+#chart js
+https://www.facebook.com/groups/dynamicwordpress/posts/1575704923384986/
+https://www.w3schools.com/ai/ai_chartjs.asp
+
+#tốc độ load trang web
+Link tham khảo: https://wiki.matbao.net/kb/huong-dan-cach-toi-uu-wordpress-de-tang-toc-do-website/?gad_source=1&gclid=Cj0KCQjw5ea1BhC6ARIsAEOG5py9NO4WhdhNK9bcPBjtvjJfcJBdx1NgktUEgqcKkWMNWtt2ejHyVmEaAvNAEALw_wcB#nang-cap-phien-ban-php
+
+Tham khảo thêm link trên kb 
+https://kb.elightup.com/toi-uu-performance/
+
+#lore more
+https://codepen.io/mostakim/pen/vQqoPL
+https://codepen.io/ahmadshyk/pen/QZNjYx
+
+#animation 
+https://www.youtube.com/watch?v=amTUmMPLZgg
+
+#Một số hiệu ứng cho bài post, tham khảo cho bài tut
+https://www.youtube.com/watch?v=Y0tyPAOcwDw
+
+# ẩn các subfield group dựa vào 1 field
+https://brickslabs.com/meta-box-group-bricks-query-loop-filtered-by-a-true-false-subfield/
+
+#tạo 1 popup khi truy cập vào trang, kiểu dạng thông báo hay gì đó
+https://brickslabs.com/showing-a-popup-conditionally-in-bricks-based-on-query-parameter/
+
+#random post
+https://brickslabs.com/6-random-posts-from-tag-a-6-random-posts-from-tag-b-in-a-single-bricks-query-loop/
+
+#tab taxonomy
+https://brickslabs.com/posts-grouped-by-taxonomy-terms-in-bricks-using-bricksextras-dynamic-table-and-pro-tabs/
+
+#bacground
+https://brickslabs.com/dynamic-background-slideshow-in-bricks/
+
+#Relationship between a CPT and a Taxonomy of another CPT
+https://brickslabs.com/bidirectional-relationship-between-a-cpt-and-a-taxonomy-of-another-cpt-using-acf-in-bricks/
+
+#tạo CF và CPT từ Gu
+https://www.youtube.com/watch?v=S2cSfS52Udw
+
+#Breakdance 2.1 phát hành, bao gồm 1 số tính năng mới:
+
+#update kéo thả CPT
+
+#add favicon cho site để khi bật nhiều tab đỡ bị nhầm
+để ngay image favicon ở thư mục gốc ở ngoài mỗi site, xong gọi nó bằng code ở file function.php
+function add_favicon_to_head() {
+    $favicon_url = 'https://crunchify.com/favicon.ico'; // Replace with the URL of your favicon
+    echo '<link rel="icon" href="' . esc_url($favicon_url) . '" type="image/x-icon" />';
+}
+add_action('wp_head', 'add_favicon_to_head');
+
+# Tạo filter (bộ lọc) cho danh sách học viên, hoặc danh sách khách sạn , bất động sản, nhà hàng, khóa học, việc làm
+https://www.traveloka.com/vi-vn/hotel/vietnam/city/nha-trang-10010498
+Tạo một group field là thông tin học viên trong đó có nhiều subfield về thông tin học viên, sau đó tạo bộ lọc để tìm kiếm học viên theo một tiêu chí nào đó
+có thể lọc nhiều cách dùng Bricks
+
+#tutorial bricks
+https://www.youtube.com/watch?v=WqfVyJQV6Eo
+
+#Query Count
+https://brickslabs.com/conditionally-outputting-based-on-query-count-in-bricks/
+
+
+https://www.facebook.com/groups/brickscommunity/posts/1469559863708529/
+https://www.facebook.com/groups/brickscommunity/posts/1469967547001094/
+https://www.facebook.com/groups/brickscommunity/posts/1469530453711470/
+https://www.facebook.com/groups/brickscommunity/posts/1469050883759427/
+https://www.facebook.com/groups/brickscommunity/posts/1471665833497932/
+https://www.facebook.com/groups/brickslabs/posts/8795887763803789/
+https://www.facebook.com/groups/brickscommunity/posts/1490026748328507/
+https://www.facebook.com/groups/brickscommunity/posts/1490671781597337/
+https://www.facebook.com/groups/brickscommunity/posts/1491071704890678/
+https://www.facebook.com/groups/brickscommunity/posts/1494324694565379/
+https://www.facebook.com/groups/metaboxusers/posts/1627925031158468/
+https://www.facebook.com/groups/brickscommunity/posts/1498402244157624/
+https://www.facebook.com/groups/brickscommunity/posts/1499455584052290/
+https://www.facebook.com/groups/dynamicwordpress/posts/1697537031201774/
+
+
+https://brickslabs.com/filtering-acf-repeater-rows-in-bricks-by-a-boolean-sub-field/?fbclid=IwZXh0bgNhZW0CMTAAAR2ILPMBP5Ih99KdUOKW-TgENUW5ZmJgCHDEZ7MZdNWAmXWuTmYzayjU434_aem_jbtM8Jr7yKOG43fePzmFQA
+https://www.facebook.com/groups/dynamicwordpress/posts/ive-decided-to-go-with-1-cpt-for-a-listing-website-called-locations-i-will-creat/1663471474608330/
+https://www.facebook.com/groups/brickscommunity/posts/solvedhi-everyoneim-trying-to-make-a-section-visible-if-todays-date-is-less-than/1476915432972972/
+https://www.facebook.com/groups/dynamicwordpress/posts/ive-decided-to-go-with-1-cpt-for-a-listing-website-called-locations-i-will-creat/1663471474608330/
+https://www.facebook.com/groups/brickscommunity/posts/love-bricksacf-pro-just-a-snippet-from-our-work-this-weekbuilding-a-dynamic-open/1480351462629369/
+https://www.facebook.com/groups/brickscommunity/posts/could-somebody-help-me-with-my-query-loop-pleaseim-working-on-a-single-template-/1480238652640650/
+https://www.facebook.com/groups/brickscommunity/posts/technicaly-inquiry-on-brickss-query-ability-and-see-if-theres-a-tutorial-or-docu/1484178352246680/
+https://www.facebook.com/groups/brickscommunity/posts/i-have-a-real-estate-websitei-have-the-filters-set-up-to-enable-a-granular-searc/1484544645543384/
+https://www.facebook.com/groups/brickscommunity/posts/1519159225415259/
+
+
+
+#coming soon page with bricks
+https://ivojerkovic.com/code/enhance-countdown-timers-in-bricks-builder/
+https://itchycode.com/some-powerful-filter-hooks-in-bricks-builder-you-might-not-know/
+https://wagepirate.com/bricks-builder-coming-soon-page/
+add_action( 'template_redirect', 'wpirate_comingsoon' );
+function wpirate_comingsoon() {
+	if( !is_user_logged_in() && !is_page('coming-soon') ){
+		 wp_redirect( site_url('coming-soon') );
+		 exit();
+	}
+}
+
+
+
+#WooCommeece, metabox, bricks
+
+#coming soon page with elementor
+tạo field, tạo setting page, coundown thì dùng shortcode để get data ra
+function short_code_time() { 
+    $time = rwmb_meta( 'datetime', ['object_type' => 'setting'], 'coming-soon' );
+    return $time;
+}
+add_shortcode( 'time-shortcode', 'short_code_time' );
+
+#https://chatgpt.com/c/6722f50e-b358-8011-b121-4af9939e7926
+
+#Tối ưu trang landing page
+https://sikido.vn/huong-d-n-cach-toi-uu-seo-cho-landing-page
+https://miccreative.vn/toi-uu-landing-page-chuan-seo/
+https://getflycrm.com/mau-landing-page-chuyen-nghiep/
+https://www.gosell.vn/blog/toi-uu-landing-page-2/
+
+
+#Các lỗ hổng bảo mật phổ biến mà các trang web thường gặp phải.
+https://www.acunetix.com/websitesecurity/sql-injection/
+https://www.toptal.com/cybersecurity/10-most-common-web-security-vulnerabilities
+https://vietnix.vn/lo-hong-bao-mat/
+https://cystack.net/vi/blog/10-lo-hong-bao-mat-web#6.-sensitive-data-exposure-(ro-ri-du-lieu-nhay-cam)
+
+
+
+#Làm event related và bài event group với mb views
+https://docs.metabox.io/tutorials/display-related-posts-based-on-shared-relationship/
+https://docs.metabox.io/tutorials/display-events-group-by-month-year/
+
+#làm các bài sort year và sort monthe bằng mb view
+https://brickslabs.com/posts-grouped-by-month-and-year-in-bricks/?fbclid=IwZXh0bgNhZW0CMTEAAR1IHleR6kIX_o8D79CT5g6u5zKZbd_f-AkMazsJBClEpFenbREMszbLA-I_aem_CjbOD40tJU8I_6t2pYjAew
+
+#bricks 2.0
+https://breakdance.com/breakdance-2-2-now-available/
+
+#https://bricksbuilder.io/changelog/
+
+#làm simple listing với mb views
+https://codepen.io/desandro/pen/gOrVQa
+https://codepen.io/desandro/pen/BapExq
+https://codepen.io/desandro/pen/WyOZjx
+https://codepen.io/tag/isotope?cursor=ZD0xJm89MCZwPTM=
+https://codepen.io/desandro/pen/YzPMBx
+https://codepen.io/xroses/pen/ExKVKJv
+
+#làm search post by taxonomy with mb views
+https://docs.metabox.io/tutorials/search-posts-by-taxonomy/
+https://codepen.io/desandro/pen/gOrVQa
+https://codepen.io/lessthanthree31/pen/yLYwXEy
+
+
+#nghiên cứu làm 1 topic về job list manger, với mb views và các page builder
+https://wordpress.org/plugins/wp-job-manager/#description
+https://www.youtube.com/watch?v=xiyK3i3yupg
+https://www.youtube.com/watch?v=qiwgH0vvhpw
+
+#làm Fluent Forms với meta box
+https://studio.youtube.com/channel/UC5azrxHYW9x8404hqTcUIAg/comments/inbox?c=UC5azrxHYW9x8404hqTcUIAg&filter=%5B%5D
+
+#accordion
+https://www.facebook.com/groups/metaboxusers/posts/1651953452088959/
+
+#Bio page dùng full site editer
+https://www.youtube.com/watch?v=Dg7dcbab1nk&t=145s
+Dùng kiểu custom field cho thành block, xong view thì dùng render with Code
+
+#https://www.facebook.com/groups/brickslabs/
+https://brickslabs.com/filtering-meta-box-cloneable-group-by-select-subfield-for-multiple-bricks-query-loops-with-conditional-output/
+
+
+
+
+#Upcoming Event
+1: sửa query theo hướng query luôn ra sự kiện sắp tới, k phải query tất ra roi
+2: show all nhưng có 2 nút filter front-end, 1 là sự kiện sắp xảy ra , 2 là đã sảy ra
+
+
+#Event có các topic và speaker
+1: search bất kì tên topic, tên speaker đều ra sự kiện liện quan tới cái đó
+2: show all nhưng có 2 nút filter front-end, 1 là sự kiện sắp xảy ra , 2 là đã sảy ra
+
+
+(./images/beginners-1.png)
+(/tutorials/beginners-2.png)
+
+click vào link ảnh nó ra các bài đầu tiên
+Sửa title: https://docs.metabox.io/tutorials/get-posts-by-custom-fields/

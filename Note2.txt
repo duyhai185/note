@@ -1,0 +1,56 @@
+Bricks: Theme
+Breakdance : Plugin
+Oxygen : Plugin
+Elementor : Plugin
+Zion : Plugin
+Kadence : Plugin và Theme
+Brizy : Plugin
+Grid Builder : Plugin
+Beaver Builder:  Theme và Plugin
+
+#Bricks Builder
+Single: Bricks -> Template -> Single Post
+Page List: Create Page or edit homepage -> Div (hoặc posts, blocks) -> edit query
+
+#Oxygen Builder
+Single: Oxygen -> Template -> Single Post
+Page List: Create Page or edit homepage -> Repeater Component -> edit query
+
+#Elementor Builder
+Single: Oxygen -> Template -> Single Post
+Page List: 
+1. Templates -> Theme Builder -> Loop sau đó edit page hoặc home page -> select elementor Loop Grid
+2. Create 1 skin -> Create Page or edit homepage -> select elementor Meta Box Group Skins
+hoặc  Templates -> Theme Builder -> loop item  xong vào page  -> loop grid
+
+#Breakdance Builder
+Single: Breakdance -> Template -> Single Post( hoặc custom templates -> single post)
+Page List: Breakdance -> global block -> homepage hoặc div -> Post Loop Builder
+
+#Kadence Builder
+Single: Appearance > Kadence > Elements > Add New
+Page List: Kadence Blocks > All Query Cards
+
+
+https://www.kadencewp.com/my-account/downloads/
+tk:  marketing@elightup.com	
+mk: luoibieng
+
+
+#Zion Builder
+Single: Zion -> Template
+Page List: Section -> column -> tab Advanced -> Repeater Optin -> Query
+
+
+
+Các Trường hợp MB View sinh ra thêm nhiều dòng có hàm attribute lấy giá trị
+1. nếu setting page để id có gạch ngang, hoặc là number ở trước, ví dụ 404_not, 404-not
+2. nếu field group mà field có id là gạch ngang(trường hợp này ít gặp vì ít sửa id field)
+
+
+# không lưu dc CPT khi tạo field, nguyên nhân do nhiều trường quá và cần nâng cấp PHP MAX INPUT lên tầm 1000
+https://www.facebook.com/groups/brickscommunity/posts/custom-field-metabox-after-selecting-location-for-displaying-custom-field-the-lo/1474975116500337/
+
+#Vào plugin ->  Sao lưu ngay, đợi nó sao lưu, sau đó xuống chỗ Existing backups , click vào 5 button là sẽ hiện 5 chỗ để tải xuống (Sao lưu dữ liệu (bấm vào để tải về)
+backup bằng updraft thường sinh ra 5 file gồm theme, database, plugin ...
+khi download các field backup về phải xóa số 1 ở đằng sau tên file
