@@ -33,6 +33,9 @@ git config --global user.email "marketing@elightup.com"
 
 	10.git branch -d tutorial   					(Xóa nhánh tutorial trên máy)
 	11.git push origin --delete tutorial 			(Xóa nhánh tutorial trên GitHub)
+	
+	12.git checkout -b tutorial origin/tutorial		(Lệnh này tạo nhánh tutorial ở local và gắn nó với nhánh tutorial trên remote (origin), đồng thời pull code về luôn)
+
 
 
 
