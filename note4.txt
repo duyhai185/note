@@ -1,24 +1,21 @@
-git config --global user.name "Tên của bạn"
-git config --global user.email "Email của bạn"
+Phần 1: Cấu hình Git:
+	git config --global user.name "Tên của bạn"
+	git config --global user.email "Email của bạn"
 
-git config --global user.name "elumarketing"
-git config --global user.email "marketing@elightup.com"
+	git config --global user.name "elumarketing"
+	git config --global user.email "marketing@elightup.com"
 
-- Cập nhật nhánh tutorial theo nhánh master:
-	Cách 1
+Phần 2: Cập nhật nhánh tutorial theo master
+	Cách 1:
 		1.git checkout master (Chuyển sang nhánh master )
 		2.git pull origin master (Pull commits mới từ GitHub về máy)
-		3.git pull origin tutorial  (Cập nhật nhánh tutorial từ remote)
-		4.git checkout tutorial (Chuyển sang nhánh tutorial)
-		5.git merge master (dùng để hợp nhất (merge) nhánh master vào nhánh hiện tại, tức là lấy tất cả các thay đổi mới nhất từ master và gộp vào nhánh đang làm việc)
+		3.git checkout tutorial (Chuyển sang nhánh tutorial)
+		4.git merge master (dùng để hợp nhất (merge) nhánh master vào nhánh hiện tại, tức là lấy tất cả các thay đổi mới nhất từ master và gộp vào nhánh đang làm việc)
 	Cách 2:
 		git checkout tutorial (Chuyển sang nhánh tutorial)		
 		git rebase master (Cập nhật nhánh tutorial theo nhánh master:)
 
-
-
-
-- Merga nhánh tutorial và nhánh master
+Phần 3: Merge nhánh tutorial vào master
 	1.git checkout tutorial    (Chuyển sang nhánh tutorial)
 	2.git status 									(Kiểm tra trạng thái thay đổi)
 	3.git add .  									(Thêm all file vào Git)
@@ -31,16 +28,13 @@ git config --global user.email "marketing@elightup.com"
 	8.git merge tutorial 							(Merge nhánh tutorial vào nhánh hiện tại, hiện tại đang ở nhánh master)
 	9.git push origin master 						(Đẩy master lên GitHub)
 
-	10.git branch -d tutorial   					(Xóa nhánh tutorial trên máy)
-	11.git push origin --delete tutorial 			(Xóa nhánh tutorial trên GitHub)
-	
-	12.git checkout -b tutorial origin/tutorial		(Lệnh này tạo nhánh tutorial ở local và gắn nó với nhánh tutorial trên remote (origin), đồng thời pull code về luôn)
+	10.git branch -d tutorial   					# Xóa nhánh tutorial trên máy (chỉ xóa được nếu đã merge)
+	11.git push origin --delete tutorial 			# Xóa bắt buộc nếu chưa merge (cẩn thận, có thể mất code)
+
+	12.git checkout -b tutorial origin/tutorials	(Lệnh này tạo nhánh tutorial ở local và gắn nó với nhánh tutorial trên remote (origin), đồng thời pull code về luôn)
 
 
-
-
-
-
+ Phần 4: Cập nhật code từ remote về local
 -  Nếu bạn đang làm việc trên master và muốn cập nhật từ master remove về master local:
 	git checkout master
 	git pull origin master
@@ -48,38 +42,109 @@ git config --global user.email "marketing@elightup.com"
 	git checkout tutorial
 	git pull origin tutorial
 
+Phần 5: Xóa nhánh
 - Xóa nhánh tutorial bằng Terminal
 	Trước khi xóa, đảm bảo bạn không đứng trên nhánh tutorial, vì Git không cho phép xóa nhánh hiện tại.
 	git checkout master  				   Chuyển sang nhánh khác (nếu đang ở tutorial)	
 	1.git branch -d tutorial               (Xóa nhánh tutorial trên máy)
 	2.git push origin --delete tutorial    (Xóa nhánh tutorial trên GitHub)
 
-
+Phần 6: Di chuyển thư mục
 - nếu không ở đúng thư mục, gõ :
-lệnh cd để kiểm tra xem đang ở đâu và 
-lệnh cd C:\laragon\www\wpmetabox\docsv2\ để trỏ đúng thư mục git đã clone repo Git
-lệnh cd C:\laragon\www\wpmetabox\tutorials\ để trỏ đúng thư mục git đã clone repo Git
+	lệnh cd để kiểm tra xem đang ở đâu và 
+	lệnh cd C:\laragon\www\wpmetabox\docsv2\ để trỏ đúng thư mục git đã clone repo Git
+	lệnh cd C:\laragon\www\wpmetabox\tutorials\ để trỏ đúng thư mục git đã clone repo Git
 
 
-
+Phần 7: Cập nhật tutorial từ remote, rồi merge vào master và push
 - nếu trên web đang sửa nhánh tutorial(remove) rồi, giờ Cập nhật nhánh tutorial ở local với những thay đổi mới nhất từ remote, 
 Chuyển sang nhánh master ở local và merge nhánh tutorial vào master và Đẩy (push) nhánh master ở local lên remote (origin/master).
 
-1.git checkout tutorial      # Chuyển sang nhánh tutorial
-2.git pull origin tutorial   # Cập nhật tutorial từ remote
+	1.git checkout tutorial      # Chuyển sang nhánh tutorial
+	2.git pull origin tutorial   # Cập nhật tutorial từ remote
 
-3.git checkout master        # Chuyển sang nhánh master
-4.git pull origin master     # Cập nhật master từ remote
+	3.git checkout master        # Chuyển sang nhánh master
+	4.git pull origin master     # Cập nhật master từ remote
 
-có thể thêm 2 lệnh sau, nhưng xem có cần thiết hay không
-5.git merge tutorial         # Hợp nhất tutorial vào nhánh hiện tại(thường thì là đang đứng ở master)
+	có thể thêm 2 lệnh sau, nhưng xem có cần thiết hay không
+	5.git merge tutorial         # Hợp nhất tutorial vào nhánh hiện tại(thường thì là đang đứng ở master)
 
-6.git push origin master      # Đẩy master lên remote
+	6.git push origin master      # Đẩy master lên remote
 
-
+Phần 8: Clone 1 nhánh cụ thể
 - nếu chưa clone về local, muốn clone code của riêng 1 nhánh trên remove về local để test 1 chức năng nào đó
 
 	1.git clone -b feat-reorder-hierarchical https://github.com/ten-ban/repo.git
 	feat-reorder-hierarchical là tên nhánh
 	https://github.com/ten-ban/repo.git là url của repo
 	2.composer install hoặc composer update (vào bên trong folder plugin đó)
+
+Phần 9:Tạo và đẩy nhánh mới lên remote
+	Khi bạn tạo một nhánh mới để làm tính năng mới, rồi muốn đẩy nó lên remote để đồng đội cùng xem/cùng làm.
+
+	git checkout -b ten-nhanh-moi           # Tạo nhánh mới và chuyển vào đó
+	git push -u origin ten-nhanh-moi        # Đẩy nhánh lên remote và gắn tracking
+	-u giúp liên kết nhánh local và remote lại với nhau để sau này chỉ cần git pull hoặc git push không cần ghi tên nhánh nữa
+
+Phần 10:  Giải quyết xung đột (conflict) khi merge/rebase
+	# Sau khi sửa file xung đột, cần add lại file đó để Git biết bạn đã xử lý xong
+	Nếu xảy ra xung đột (conflict), Git sẽ thông báo. Bạn cần:
+	# Sửa file bị xung đột, sau đó:
+	git add <ten_file>                      # Đánh dấu file đã giải quyết conflict
+	git commit                              # Tạo commit mới nếu là merge
+	# hoặc:
+	git rebase --continue                   # Tiếp tục rebase nếu đang rebase dở
+
+
+11. Làm việc với nhánh đã bị xóa local nhưng còn trên remote
+	Ví dụ: bạn clone repo về nhưng không thấy nhánh hotfix vì chưa fetch
+
+	git fetch origin                        # Lấy thông tin nhánh mới nhất từ remote
+	git checkout -b hotfix origin/hotfix    # Tạo nhánh local từ nhánh hotfix trên remote
+
+
+
+
+
+
+
+Quy trình làm việc nhóm với Git + Pull Request (PR)
+1. Quy tắc Git Flow phổ biến
+	Nhánh									Mục đích
+	main / master					Mã ổn định đã release
+	develop							Nhánh phát triển chung
+	feature/ten-chuc-nang			Nhánh tính năng (feature mới)
+	bugfix/ten-loi					Sửa lỗi nhỏ trong khi phát triển
+	hotfix/ten-loi	Sửa				Sửa lỗi khẩn cấp (từ main)
+	release/ten-ban-phat-hanh		Chuẩn bị phát hành, kiểm thử cuối
+
+2. Quy trình làm việc chuẩn
+	Bước 1: Đồng bộ code mới nhất
+		git checkout develop                      # Chuyển sang nhánh phát triển
+		git pull origin develop                   # Lấy bản cập nhật mới nhất
+	Bước 2: Tạo nhánh feature mới
+		git checkout -b feature/ten-chuc-nang     # Tạo nhánh tính năng từ develop
+	Bước 3: Làm việc, commit và đẩy lên remote
+		git add .                                 # Thêm thay đổi
+		git commit -m "Thêm chức năng ABC"        # Ghi lại thay đổi
+		git push -u origin feature/ten-chuc-nang  # Đẩy nhánh lên remote
+	Bước 4: Tạo Pull Request (PR)
+		Vào GitHub/GitLab → Mở Pull Request từ feature/... vào develop
+		Chờ code review / hoặc review cho người khác
+		Merge sau khi pass ✅
+	Bước 5: Xóa nhánh feature sau khi merge
+		git branch -d feature/ten-chuc-nang        # Xóa local
+		git push origin --delete feature/ten-chuc-nang  # Xóa remote
+
+3. Khi cần sửa lỗi gấp trên main (hotfix)
+	git checkout main
+	git pull origin main
+	git checkout -b hotfix/loi-trang-chu
+	# Sửa lỗi → commit → push → PR vào main → merge → tag phiên bản nếu cần
+
+4. Tips phối hợp nhóm hiệu quả
+	Luôn pull trước khi làm việc mới
+	Đặt tên nhánh rõ ràng: feature/add-login, bugfix/fix-navbar,...
+	Code xong phải push lên để người khác không làm trùng
+	Luôn tạo PR (không push trực tiếp vào main hoặc develop)
+	Viết mô tả rõ ràng trong PR để người review hiểu nhanh
