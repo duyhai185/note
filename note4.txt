@@ -5,6 +5,8 @@ Phần 1: Cấu hình Git:
 	git config --global user.name "elumarketing"
 	git config --global user.email "marketing@elightup.com"
 
+
+
 Phần 2: Cập nhật nhánh tutorial theo master
 	Cách 1:
 		1.git checkout master (Chuyển sang nhánh master )
@@ -15,8 +17,10 @@ Phần 2: Cập nhật nhánh tutorial theo master
 		git checkout tutorial (Chuyển sang nhánh tutorial)		
 		git rebase master (Cập nhật nhánh tutorial theo nhánh master:)
 
+
+
 Phần 3: Merge nhánh tutorial vào master
-	1.git checkout tutorial    (Chuyển sang nhánh tutorial)
+	1.git checkout tutorial    						(Chuyển sang nhánh tutorial)
 	2.git status 									(Kiểm tra trạng thái thay đổi)
 	3.git add .  									(Thêm all file vào Git)
 	4.git commit -m "Cập nhật nội dung file XYZ" 	(tạo một commit mới)
@@ -34,6 +38,7 @@ Phần 3: Merge nhánh tutorial vào master
 	12.git checkout -b tutorial origin/tutorials	(Lệnh này tạo nhánh tutorial ở local và gắn nó với nhánh tutorial trên remote (origin), đồng thời pull code về luôn)
 
 
+
  Phần 4: Cập nhật code từ remote về local
 -  Nếu bạn đang làm việc trên master và muốn cập nhật từ master remove về master local:
 	git checkout master
@@ -42,6 +47,8 @@ Phần 3: Merge nhánh tutorial vào master
 	git checkout tutorial
 	git pull origin tutorial
 
+
+
 Phần 5: Xóa nhánh
 - Xóa nhánh tutorial bằng Terminal
 	Trước khi xóa, đảm bảo bạn không đứng trên nhánh tutorial, vì Git không cho phép xóa nhánh hiện tại.
@@ -49,11 +56,14 @@ Phần 5: Xóa nhánh
 	1.git branch -d tutorial               (Xóa nhánh tutorial trên máy)
 	2.git push origin --delete tutorial    (Xóa nhánh tutorial trên GitHub)
 
+
+
 Phần 6: Di chuyển thư mục
 - nếu không ở đúng thư mục, gõ :
 	lệnh cd để kiểm tra xem đang ở đâu và 
 	lệnh cd C:\laragon\www\wpmetabox\docsv2\ để trỏ đúng thư mục git đã clone repo Git
 	lệnh cd C:\laragon\www\wpmetabox\tutorials\ để trỏ đúng thư mục git đã clone repo Git
+
 
 
 Phần 7: Cập nhật tutorial từ remote, rồi merge vào master và push
@@ -71,13 +81,19 @@ Chuyển sang nhánh master ở local và merge nhánh tutorial vào master và 
 
 	6.git push origin master      # Đẩy master lên remote
 
+
 Phần 8: Clone 1 nhánh cụ thể
 - nếu chưa clone về local, muốn clone code của riêng 1 nhánh trên remove về local để test 1 chức năng nào đó
 
-	1.git clone -b feat-reorder-hierarchical https://github.com/ten-ban/repo.git
-	feat-reorder-hierarchical là tên nhánh
+	1.git clone -b ui https://github.com/ten-ban/repo.git
+	ui là tên nhánh
 	https://github.com/ten-ban/repo.git là url của repo
 	2.composer install hoặc composer update (vào bên trong folder plugin đó)
+	
+- nếu bạn đã clone rồi
+	1.git fetch origin (Tải về tất cả cập nhật mới nhất từ remote (origin) nhưng không thay đổi nhánh hiện tại của bạn)
+	2.git checkout -b ui origin/ui (Tạo một nhánh local mới tên là ui và bắt đầu từ nhánh origin/ui trên remote, rồi chuyển sang nhánh đó để làm việc)
+
 
 Phần 9:Tạo và đẩy nhánh mới lên remote
 	Khi bạn tạo một nhánh mới để làm tính năng mới, rồi muốn đẩy nó lên remote để đồng đội cùng xem/cùng làm.
@@ -85,6 +101,7 @@ Phần 9:Tạo và đẩy nhánh mới lên remote
 	git checkout -b ten-nhanh-moi           # Tạo nhánh mới và chuyển vào đó
 	git push -u origin ten-nhanh-moi        # Đẩy nhánh lên remote và gắn tracking
 	-u giúp liên kết nhánh local và remote lại với nhau để sau này chỉ cần git pull hoặc git push không cần ghi tên nhánh nữa
+
 
 Phần 10:  Giải quyết xung đột (conflict) khi merge/rebase
 	# Sau khi sửa file xung đột, cần add lại file đó để Git biết bạn đã xử lý xong
@@ -96,11 +113,27 @@ Phần 10:  Giải quyết xung đột (conflict) khi merge/rebase
 	git rebase --continue                   # Tiếp tục rebase nếu đang rebase dở
 
 
-11. Làm việc với nhánh đã bị xóa local nhưng còn trên remote
+Phần 11. Làm việc với nhánh đã bị xóa local nhưng còn trên remote
 	Ví dụ: bạn clone repo về nhưng không thấy nhánh hotfix vì chưa fetch
 
 	git fetch origin                        # Lấy thông tin nhánh mới nhất từ remote
 	git checkout -b hotfix origin/hotfix    # Tạo nhánh local từ nhánh hotfix trên remote
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -148,3 +181,53 @@ Quy trình làm việc nhóm với Git + Pull Request (PR)
 	Code xong phải push lên để người khác không làm trùng
 	Luôn tạo PR (không push trực tiếp vào main hoặc develop)
 	Viết mô tả rõ ràng trong PR để người review hiểu nhanh
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Cách tạo pull request qua GitHub
+
+Bước 1: Push nhánh tutorial lên GitHub
+	Trên máy bạn:
+	git checkout tutorial
+	git add .
+	git commit -m "Thay đổi ở nhánh tutorial"
+	git push origin tutorial
+Bước 2: Truy cập repository trên GitHub
+	 vào trang repository của bạn (ví dụ https://github.com/your-name/ten-repo).
+Bước 3: Tạo Pull Request
+	Cách 1: Nút “Compare & pull request”
+		Ngay sau khi bạn push nhánh tutorial, GitHub thường sẽ hiển thị thông báo:
+		"tutorial had recent pushes less than a minute ago. Compare & pull request"
+		👉 Bấm nút "Compare & pull request"
+	Cách 2: Tạo thủ công
+		Nhấp vào tab "Pull requests"
+		Nhấp "New pull request"
+		Chọn:
+		Base: master (nơi bạn muốn gộp code vào)
+		Compare: tutorial (nhánh bạn vừa sửa)
+Bước 4: Điền thông tin
+	Tiêu đề (title): Ví dụ "Thêm tính năng lọc job theo vị trí"
+	Mô tả (description): Tóm tắt những gì bạn đã làm, thay đổi, mục tiêu...
+	(Tùy chọn) Gán người review nếu làm việc nhóm.
+Bước 5: Tạo PR
+	Bấm "Create pull request"
+Bước 6: Merge PR (sau khi được review hoặc kiểm tra)
+	Vào trang Pull Request bạn vừa tạo
+	Kiểm tra code đã ổn chưa
+	Bấm "Merge pull request"
+	Chọn "Confirm merge"
+	(Tùy chọn) Xóa nhánh tutorial nếu không còn cần thiết.
