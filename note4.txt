@@ -20,7 +20,7 @@ Phần 2: Cập nhật nhánh tutorial theo master
 
 
 Phần 3: Merge nhánh tutorial vào master
-	1.git checkout tutorial    						(Chuyển sang nhánh tutorial)
+	1.git checkout tutorial + git pull (nếu cần)	(Chuyển sang nhánh tutorial)
 	2.git status 									(Kiểm tra trạng thái thay đổi)
 	3.git add .  									(Thêm all file vào Git)
 	4.git commit -m "Cập nhật nội dung file XYZ" 	(tạo một commit mới)
