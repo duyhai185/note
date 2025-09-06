@@ -1,30 +1,60 @@
-1.Simple Custom Post Order -> kéo thả order chính xác
+Sau khi các bạn mkt commit lên, 
+	mình sẽ pull về máy
+	kiểm tra xem file md đó có thiếu hay sai cú pháp gì không,
+	chạy preview xem ổn chưa, rồi mới push lên
 
-kéo thả -> parent -> không chính xác
-parent -> kéo thả -> chỉnh xác 
+nhớ check các vấn đề
+1.tất cả tài liệu đều viết bằng cú pháp markdown
+	bảng phải viết dạng markdown
+	tham khảo cấu trúc:
+	https://www.markdownguide.org/cheat-sheet/
 
-sắp xếp chính xác thứ tự order back-end sau mỗi lần kéo thả, dù reload lại page thứ tự có thể không như thế
+	và chuyển html to markdown
+	https://codebeautify.org/html-to-markdown
+	https://htmlmarkdown.com/
 
-2.Post Types Order -> kéo thả order chính xác
+	kiểm tra các cấu trúc table, code, ảnh, text heading
 
-kéo thả -> parent -> không chính xác
-parent -> kéo thả -> chỉnh xác 
+2. kiểm tra code php, js, css xem có đúng chuẩn của Wordpress chưa
+	https://developer.wordpress.org/coding-standards/wordpress-coding-standards/
+	https://kb.elightup.com/chuan-viet-code-php/
+	và phải dùng tab vào chứ không dùng cách, dùng cách cách thụt dòng là sai, không chuyên nghiệp
+	code xem đóng mở đã đủ chưa, có khi thiếu,check code kĩ
 
-order theo thứ tự menu không phân  biệt cha con
+3. Code để trong file phải systax highlight
+	trước ``` phải để ngôn ngữ của đoạn code đó, ví dụ ```php hoặc ```js, ```css
 
-sắp xếp chính xác thứ tự order back-end sau mỗi lần kéo thả, dù reload lại page thứ tự có thể không như thế
+4. Code chỉ cần promot AIO thôi không cần promot các extension riêng nữa
+
+5. chạy xem kiểm tra lần cuối
+	- nếu đang ở file đó, Bấm Ctrl + Shift + V để xem preview hoặc vào trang https://markdownlivepreview.com/
+	- nếu muốn chạy xem ở 1 repo:
+	npm install (nếu chưa chạy)
+	npm run build
+	npm run start
 
 
-3.CPT - > nếu không có cha con thì vẫn đúng;
-nhưng nếu có cha con thì sẽ ưu tiên sắp xếp theo cấp cha hoặc con chứ không theo order kéo thả
-
--> 2 plugin kia không thể kéo thả thay đổi cha con, còn cái của mình thì có
 
 
 
-Test 2 plugin Simple Custom Post Order và Post Types Order thì thấy họ không có chức năng kéo thả phân cấp cha con, 
-chỉ có kéo thả 1 cấp là chính xác còn nếu nhiều cấp thì không kéo thả chính xác
-nhưng sắp xếp ngoài front-end sẽ lúc nào cũng theo sắp xếp trong back-end dù trong back-end dù trong backend có sắp xếp cha con không chính xác khi kéo thả
+Tự học cơ bản và nâng cao Git, GitHub, GitHub Actions và NPM
 
-Plugin của mình thì có kéo thả thay đổi phân cấp cha con chính xác do có 1 tab riêng tên là Re-Order nhưng sắp xếp ở frontend thì lại theo 1 cách khác
-với 2 plugin kia, plugin của mình sẽ sắp xếp theo từng cấp,nghĩa là cấp cha xong mới đến con hoặc ngược lại, không theo thứ tự sắp xếp trong back-end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
