@@ -83,16 +83,26 @@ Chuyển sang nhánh master ở local và merge nhánh tutorial vào master và 
 
 
 Phần 8: Clone 1 nhánh cụ thể
-- nếu chưa clone về local, muốn clone code của riêng 1 nhánh trên remove về local để test 1 chức năng nào đó
-
-	1.git clone -b ui https://github.com/ten-ban/repo.git
-	ui là tên nhánh
-	https://github.com/ten-ban/repo.git là url của repo
-	2.composer install hoặc composer update (vào bên trong folder plugin đó)
 	
-- nếu bạn đã clone rồi
+- Trường hợp 1: Đã clone repo, chưa có nhánh ui ở local -> vào bên trong folder plugin đó
 	1.git fetch origin (Tải về tất cả cập nhật mới nhất từ remote (origin) nhưng không thay đổi nhánh hiện tại của bạn)
 	2.git checkout -b ui origin/ui (Tạo một nhánh local mới tên là ui và bắt đầu từ nhánh origin/ui trên remote, rồi chuyển sang nhánh đó để làm việc)
+- Trường hợp 2: Đã có nhánh ui ở local -> vào bên trong folder plugin đó
+	1.git checkout ui 			(chuyển sang nhánh ui)
+	2.git pull origin ui 		(kéo các thay đổi từ remote về.)
+	nếu chạy git pull về báo lỗi là có thay đổi thì là có thể do thay đổi ở file composer.lock và thư mục vendor thì chạy lệnh
+	1.git reset --hard
+	2.git clean -fd
+	3.git pull
+- Trường hợp 3: Chưa có repo local (chưa clone)
+	1.git clone -b ui https://github.com/wpmetabox/meta-box-builder.git 						(clone toàn bộ repo (bao gồm các nhánh khác) và làm việc ngay trên nhánh ui)
+	Hoặc:
+	1.git clone -b ui --single-branch https://github.com/wpmetabox/meta-box-builder.git  		(chỉ clone duy nhất nhánh ui (nhanh, nhẹ hơn)
+	Với: 
+	- ui là tên nhánh
+	- https://github.com/wpmetabox/meta-box-builder.git là url của repo
+
+	2.composer install hoặc composer update (vào bên trong folder plugin đó)
 
 
 Phần 9:Tạo và đẩy nhánh mới lên remote
@@ -118,10 +128,6 @@ Phần 11. Làm việc với nhánh đã bị xóa local nhưng còn trên remot
 
 	git fetch origin                        # Lấy thông tin nhánh mới nhất từ remote
 	git checkout -b hotfix origin/hotfix    # Tạo nhánh local từ nhánh hotfix trên remote
-
-
-
-
 
 
 
@@ -231,3 +237,32 @@ Bước 6: Merge PR (sau khi được review hoặc kiểm tra)
 	Bấm "Merge pull request"
 	Chọn "Confirm merge"
 	(Tùy chọn) Xóa nhánh tutorial nếu không còn cần thiết.
+
+
+
+
+Cài đặt npm và làm với việc node js
+	ví dụ truy cập vào thư mục chứ project vừa clone về dùng lệnh, ví dụ:
+
+	cd C:\laragon\www\wpmetabox\docsv2
+	1. npm install					- mỗi project chỉ cần chạy 1 lần đầu, Lệnh này sẽ đọc file package.json và tải toàn bộ dependency cần cho project. chỉ chạy lại nếu có thay đổi trong package.json hoặc package-lock.json
+	2. npm run build 				   - sẽ build lại project thường là biên dịch Markdown/Docs thành HTML, CSS, JS...). và sinh ra 1 folder tĩnh build/ hoặc disk)
+	3. npm run start (hoặc npm start) -  Đây là lệnh để chạy dev server (hot reload, debug trực tiếp). Dùng khi bạn muốn code và xem kết quả ngay ở http://localhost:3000.
+
+	4. sau đó mở xem file đó báo lỗi gì và sửa 
+
+Workflow chuẩn cho bạn
+	1.Clone repo lần đầu
+		git clone <repo>
+		cd project
+		npm install
+		npm start
+	2.Những lần sau, nếu vẫn còn node_modules
+		git pull
+		npm start
+		(Không cần npm install trừ khi package.json thay đổi).
+
+	Chú ý: Không thể chỉ npm run build và npm start ngay lập tức, vì thiếu folder node_modules.
+
+
+
