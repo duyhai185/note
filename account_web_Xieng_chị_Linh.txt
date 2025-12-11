@@ -1,0 +1,62 @@
+giờ site của chị Linh host này nhé
+142.171.236.45
+root
+q2zz0UxrJ56KSLs2F8
+
+Do bảo mật nên không cài thêm plugin được, phải cài qua Filezilla(ftp)
+Chọn cổng sftp, nhập host và không cần nhập port
+khi login được rồi thì vào chỗ 3 chấm  .. nó sẽ back ra ngoài, xong vào folder var/www sẽ thấy site Xieng
+
+tk domain:
+https://dcc.godaddy.com/control/dnsmanagement?domainName=xiengretreat.com
+trangocdieulinh@gmail.com
+Luoibieng164
+phone: 0974688484
+
+tk login ftp:
+sftp
+142.171.236.45
+root
+q2zz0UxrJ56KSLs2F8
+
+
+tk login site:
+user: xieng
+pass: elightup123!@#
+
+VPS mới
+Username: root
+Password: sZLebVqcRWtGdFXD7LBqdzs0
+Main IP: 103.142.27.233
+Additional IPs: 2405:2840:0:27::dd
+
+Đổi IP
+Username: root
+Password: sZLebVqcRWtGdFXD7LBqdzs0
+Main IP: 180.93.136.102
+Additional IPs: 2405:2840:0:27::dd
+
+
+https://xiengretreat.com/#chi-duong
+https://xiengretreat.com/#phong-nghi
+https://xiengretreat.com/#trai-nghiem
+https://xiengretreat.com/#am-thuc
+https://xiengretreat.com/#so-do-khu
+https://xiengretreat.com/#thu-vien-anh
+https://xiengretreat.com/#lien-he
+
+
+
+
+
+
+Username: root
+Password: sZLebVqcRWtGdFXD7LBqdzs0
+Main IP: 180.93.136.102
+Additional IPs: 2405:2840:0:27::dd
+
+
+
+
+
+
